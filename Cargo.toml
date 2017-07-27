@@ -1,0 +1,11 @@
+[package]
+name = "srcipfix"
+version = "0.1.0"
+authors = ["lilydjwg <lilydjwg@gmail.com>"]
+
+[dependencies]
+nfqueue = "*"
+pnet = "*"
+
+[profile.release]
+lto = true
