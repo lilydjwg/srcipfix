@@ -1,11 +1,8 @@
-extern crate nfqueue;
-extern crate pnet;
-
 use std::io::{self, Write};
 
-use pnet::packet::Packet;
-use pnet::packet::ipv4::MutableIpv4Packet;
-use pnet::packet::udp::MutableUdpPacket;
+use pnet_packet::Packet;
+use pnet_packet::ipv4::MutableIpv4Packet;
+use pnet_packet::udp::MutableUdpPacket;
 
 fn queue_callback(msg: &nfqueue::Message, _state: &mut ()) {
   let mut data = msg.get_payload().to_owned();
